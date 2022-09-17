@@ -9,19 +9,21 @@ export class MainAreaComponent implements OnInit {
   reprint:any;
   isdisabled=true;
   userinput:any;
-maintitle:any="main area working da venna-"
+maintitle:any="main area working-"
   constructor() { }
 
   ngOnInit(): void {
   }
 onbtnclick(){
   this.isdisabled=true
-  // this.userinput="";
+   this.userinput="";
+   this.reprint="";
   console.log("button working");
 }
 onUserInput(event:any){
+  // this.reprint=event.target.value
   this.isdisabled=false
-this.userinput=event.target.value
+ this.userinput=event.target.value
 // console.log();
 }
 toggle(){
