@@ -1,7 +1,7 @@
 <p>{{maintitle}}</p>
 <button [disabled] = "isdisabled" (click)="onbtnclick()">click me!</button><br>
 username:
-<input type="text"(keyup)="onUserInput($event)"><br>
+<!-- <input type="text"(keyup)="onUserInput($event)"><br> -->
 <input type="text"[(ngModel)]="reprint"(keyup)="onUserInput($event)">
 <span>{{reprint}}</span> <br>
 <p (click)="toggle()">disable</p>
