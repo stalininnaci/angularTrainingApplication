@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./todo-list.component.scss']
 })
 export class TodoListComponent implements OnInit {
-  printData!:string
+  // printData!:string
   getData!: string;
   isdisable:boolean=false
   @Output() todoEvent = new EventEmitter();

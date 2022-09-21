@@ -11,8 +11,8 @@ export class AppComponent{
   // ischecked:boolean=false;
 
 
-resdata(data:any){
-this.printData.push(data);
+resdata(event:any){
+this.printData.push(event);
 console.log(this.printData);
 
 

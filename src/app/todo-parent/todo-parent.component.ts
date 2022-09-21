@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TodoParentComponent implements OnInit {
 @Input() takeData:any;
+ischecked:boolean=false;
   constructor() { }
 
   ngOnInit(): void {
