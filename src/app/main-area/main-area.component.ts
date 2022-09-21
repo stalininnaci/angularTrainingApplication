@@ -7,27 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainAreaComponent implements OnInit {
   
-  // userinput:any;
+  
 maintitle:any="main area working-"
-reprint:any;
-  isdisabled=true;
+reprint:string="";
+isActive:boolean=true
+   isdisabled=true;
+  //  houses:Array<string>=['Stark','Lannister','Targaryan','Valaryan']
+   houses=[{houseId:1,housename:"stark"},{houseId:2,housename:'Lannister'},
+   {houseId:3,housename:"Targaryan"},{houseId:4,housename:"Valaryan"}]
   constructor() { }
 
   ngOnInit(): void {
   }
 onbtnclick(){
-  this.isdisabled=true
-  //  this.userinput="";
    this.reprint="";
+  //  this.isdisabled=false;
   console.log("button working");
 }
-onUserInput(event:any){
-  // this.reprint=event.target.value
-  this.isdisabled=false
-//  this.userinput=event.target.value
-// console.log();
-}
-toggle(){
-  this.isdisabled= !this.isdisabled
- }
+
+ toggle(){
+   this.isdisabled= !this.isdisabled
+  }
 }

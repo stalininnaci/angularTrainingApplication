@@ -1,0 +1,15 @@
+<p>user-details works!</p>
+    <div class="user">
+        <!-- <p>{{userList}}</p> -->
+        <div class="profile-pic">
+            <img [src]="user.avatar" alt="">
+        </div>
+        <div class="user-details">
+            <p class="user-name"> {{user.first_name}} {{user.last_name}} </p>
+            <p class="user-email">{{user.email}}</p>
+        </div>
+        <div class="cta">
+            <button class="remove-user" (click)="userRemoving()">Remove User</button>
+        </div>
+    </div>
+    

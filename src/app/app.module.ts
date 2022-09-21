@@ -7,6 +7,11 @@ import { AppComponent } from './app.component';
 import { MainAreaComponent } from './main-area/main-area.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
+import { ChildComponent } from './child/child.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
+import { TodoParentComponent } from './todo-parent/todo-parent.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +19,12 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     MainAreaComponent,
     SidebarComponent,
-    FooterComponent
+    FooterComponent,
+    ChildComponent,
+    UserListComponent,
+    UserDetailsComponent,
+    TodoListComponent,
+    TodoParentComponent
   ],
   imports: [
     BrowserModule,

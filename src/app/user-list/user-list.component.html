@@ -1,0 +1,4 @@
+<!-- <p>user-list works!</p> -->
+<ng-container *ngFor="let user of userList,index as i">
+<app-user-details [childComp]="user" [indexUser]="i" (userRemoveEvent="userRemove($event)"></app-user-details>
+</ng-container>

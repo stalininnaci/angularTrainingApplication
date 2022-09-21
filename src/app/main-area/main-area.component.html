@@ -2,7 +2,26 @@
 
 username:
 <!-- <input type="text"(keyup)="onUserInput($event)"><br> -->
-<input type="text"[(ngModel)]="reprint"(keyup)="onUserInput($event)">
+<input type="text"[(ngModel)]="reprint">
 <span>{{reprint}}</span> <br>
-<button [disabled] = "isdisabled" (click)="onbtnclick()">click me!</button><br>
+<button [disabled] = "!reprint" (click)="onbtnclick()">click me!</button><br>
 <button (click)="toggle()">disable</button>
+
+
+
+
+          
+<p [ngStyle]="{'font-size':isActive?'40px':''}">This context for ngstyle directive</p>
+<p (click)="isActive=!isActive" [ngClass]="isActive?'isActive':'inActive'">This context for ngclass directive</p>
+
+<p *ngIf="isActive">this context render when ifcondition is true</p>
+<p *ngIf="!isActive">this is when ifcondition is false else block</p>
+<ul>
+    <li *ngFor="let house of houses;index as i;first as isFirst;last as isLast;even as isEven;odd as isOdd">{{i+1}} {{isFirst}} {{isLast}} {{isEven}} {{isOdd}} {{house.houseId}} {{house.housename}}
+     <span [ngClass]="!isFirst?'isActive':''">checking</span>
+    </li>
+    <!-- <li>Lannister</li>
+    <li>Taragaryan</li>
+    <li>Valaryan</li> -->
+</ul>
+
