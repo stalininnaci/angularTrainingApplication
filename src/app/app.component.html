@@ -1,14 +1,47 @@
 
+<div class="router">
+<ul>
+  <li><a routerLink="#">Home</a></li>
+  <li><a routerLink="/aboutus">About-us</a></li>
+  <li><a routerLink="/contactus">Contact-us</a></li>
+</ul>
+</div>
 
-<app-todo-list (todoEvent)="resdata($event)"></app-todo-list>
+
+<router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <app-todo-list (todoEvent)="resdata($event)"></app-todo-list>
 
 
 
 <ng-container *ngFor="let data of printData, index as i" > 
   <app-todo-parent [takeData]="data" [listIndex]="i" [takeArray]="printData"  ></app-todo-parent>
  
-</ng-container>
-<!-- <app-todo-parent></app-todo-parent> -->
+</ng-container> -->
+
 
 
 
