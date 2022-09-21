@@ -1,5 +1,9 @@
 <!-- <p>todo-parent works!</p> -->
-<!-- <div class="parent"> -->
-<input type="checkbox" for="cbox"> 
-<label [ngStyle]="{'text-decoration':!ischecked?'line-through':''}"> {{takeData}} </label><br>
-<!-- </div> -->
+<div class="parent">
+    <!-- <ng-container *ngFor="let index as i"> -->
+<input type="checkbox" for="cbox" [(ngModel)]="ischecked"> 
+<label [ngStyle]="{'text-decoration':ischecked?'line-through':''}"> 
+    {{takeData}} </label><br>
+    <button (click)="dataRemove()">Delete</button>
+<!-- </ng-container> -->
+</div>

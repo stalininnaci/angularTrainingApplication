@@ -4,8 +4,8 @@
 
 
 
-<ng-container *ngFor="let data of printData" > 
-  <app-todo-parent [takeData]="data"></app-todo-parent>
+<ng-container *ngFor="let data of printData, index as i" > 
+  <app-todo-parent [takeData]="data" [listIndex]="i" [takeArray]="printData"  ></app-todo-parent>
  
 </ng-container>
 <!-- <app-todo-parent></app-todo-parent> -->

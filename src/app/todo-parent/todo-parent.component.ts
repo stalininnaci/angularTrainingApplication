@@ -7,14 +7,19 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TodoParentComponent implements OnInit {
 @Input() takeData:any;
+@Input() listIndex:any;
+@Input() takeArray:any[]=[];
 ischecked:boolean=false;
   constructor() { }
 
   ngOnInit(): void {
 
+  }
 
-
-
+  dataRemove(){
+    this.takeArray.splice(this.listIndex,1)
+    console.log(this.takeArray);
+    
   }
 
 }
