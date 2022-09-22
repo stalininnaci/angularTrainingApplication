@@ -25,6 +25,14 @@
     
 }
 .router{
+    border: 2px solid;
+    height: 70px;
+}
+
+.router ul{
     display: flex;
     justify-content: center;
+    justify-content: space-around;
+    font-size: 20px;
+    // border: 2px solid;
 }

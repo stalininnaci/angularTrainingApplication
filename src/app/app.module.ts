@@ -15,6 +15,7 @@ import { TodoParentComponent } from './todo-parent/todo-parent.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AboutusChildComponent } from './aboutus-child/aboutus-child.component';
+import { ContactusChildComponent } from './contactus-child/contactus-child.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AboutusChildComponent } from './aboutus-child/aboutus-child.component';
     TodoParentComponent,
     AboutusComponent,
     ContactusComponent,
-    AboutusChildComponent
+    AboutusChildComponent,
+    ContactusChildComponent
   ],
   imports: [
     BrowserModule,
