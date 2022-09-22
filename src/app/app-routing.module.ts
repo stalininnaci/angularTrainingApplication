@@ -5,14 +5,22 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusChildComponent } from './contactus-child/contactus-child.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { UserListComponent } from './user-list/user-list.component';
 const routes: Routes = [
+  {
+  path:"",
+  redirectTo:'aboutus',
+  pathMatch:'full'
+  },
   {
   path:'aboutus',
   component:AboutusComponent,
-  children:[{
-    path:':user',
-    component:AboutusChildComponent
-  }]
+  children:[
+  {
+    path:'user-list',
+    component:UserListComponent
+  }
+]
 },{
   path:'contactus',
   component:ContactusComponent,
