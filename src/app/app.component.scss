@@ -26,13 +26,21 @@
 }
 .router{
     border: 2px solid;
-    height: 70px;
-}
+    // height: 100%;
+    // width:30% ;
+     background-color: bisque;
+// background-image: url(/assets/01d4d71022b4872125932fe69322f31b.jpg);
+//     background-repeat: no-repeat;
+//     background-size: cover;
+ }
 
 .router ul{
     display: flex;
     justify-content: center;
     justify-content: space-around;
     font-size: 20px;
+    
+    // width:30% ;
     // border: 2px solid;
+    
 }

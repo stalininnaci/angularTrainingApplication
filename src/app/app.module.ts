@@ -16,6 +16,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AboutusChildComponent } from './aboutus-child/aboutus-child.component';
 import { ContactusChildComponent } from './contactus-child/contactus-child.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ContactusChildComponent } from './contactus-child/contactus-child.compo
     AboutusComponent,
     ContactusComponent,
     AboutusChildComponent,
-    ContactusChildComponent
+    ContactusChildComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

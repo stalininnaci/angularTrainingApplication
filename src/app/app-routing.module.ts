@@ -4,12 +4,13 @@ import { AboutusChildComponent } from './aboutus-child/aboutus-child.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusChildComponent } from './contactus-child/contactus-child.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 const routes: Routes = [
   {
   path:'aboutus',
   component:AboutusComponent,
   children:[{
-    path:'aboutus-child',
+    path:':user',
     component:AboutusChildComponent
   }]
 },{
@@ -19,6 +20,10 @@ const routes: Routes = [
     path:'contactus-child',
     component:ContactusChildComponent
   }]
+},
+{
+  path:"**",
+  component:PageNotFoundComponent
 }
 ];
 
