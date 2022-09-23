@@ -25,6 +25,11 @@
     
 }
 .router{
+    display: flex;
+    height: 100%;
+
+}
+.router .col-4{
     border: 2px solid;
     // height: 100%;
     // width:30% ;
@@ -39,8 +44,10 @@
     justify-content: center;
     justify-content: space-around;
     font-size: 20px;
-    
-    // width:30% ;
-    // border: 2px solid;
-    
+}
+.col-8{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    background-color: aqua;
 }

@@ -9,13 +9,9 @@ export class AppComponent{
 
   printData: Array<string> = [];
   // ischecked:boolean=false;
-
-
 resdata(event:any){
 this.printData.push(event);
 console.log(this.printData);
-
-
-}
+ }
 }
 
