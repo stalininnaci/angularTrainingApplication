@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-aboutus',
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AboutusComponent implements OnInit {
 
-  constructor(private route:Router) { }
+  constructor(private routes:Router,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
     // setTimeout(() => {
