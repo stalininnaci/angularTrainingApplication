@@ -2,7 +2,8 @@
 
 <ng-container *ngFor="let user of userList,index as i">
     <div class="userlist">
-<a [routerLink]="['user',user.id]">{{user.first_name}}</a>
+<!-- <a [routerLink]="['user',user.id]">{{user.first_name}}</a> -->
+<p (click)="navigateToUserDetails(user.id)">{{user.first_name}}</p>
 <!-- <app-user-details [childComp]="user" [indexUser]="i" (userRemoveEvent)="userRemove($event)"></app-user-details> -->
 </div>
 </ng-container>

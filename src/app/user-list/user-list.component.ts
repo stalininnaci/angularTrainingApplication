@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 interface user{
@@ -16,7 +17,7 @@ interface user{
 })
 export class UserListComponent implements OnInit {
  userList:user[]=[]
-  constructor() { }
+  constructor(private route:Router, private routes:ActivatedRoute ) { }
 
   ngOnInit(): void {
 
@@ -61,6 +62,9 @@ export class UserListComponent implements OnInit {
   }
   userRemove(i:number){
     this.userList.splice(i,1)
+  }
+  navigateToUserDetails(id:number){
+this.route.navigate(['user',id],{relativeTo:this.routes})
   }
 
 }

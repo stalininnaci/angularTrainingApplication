@@ -17,6 +17,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { AboutusChildComponent } from './aboutus-child/aboutus-child.component';
 import { ContactusChildComponent } from './contactus-child/contactus-child.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ParentCompComponent } from './prent-module/parent-comp/parent-comp.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ContactusComponent,
     AboutusChildComponent,
     ContactusChildComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ParentCompComponent
   ],
   imports: [
     BrowserModule,
