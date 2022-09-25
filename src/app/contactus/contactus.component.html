@@ -1,5 +1,20 @@
 <div class="contact">
 <p>contactus works!</p>
 <a routerLink="contactus-child">contact for more</a>
+<table class='table'>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of dataList;">
+        <td>{{person.id}}</td>
+        <td>{{person.name}}</td>
+      </tr>
+    </tbody>
+  </table>
+ <p>{{dataList.person}}</p>  
 <router-outlet></router-outlet>
 </div>

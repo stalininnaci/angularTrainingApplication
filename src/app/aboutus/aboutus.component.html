@@ -4,8 +4,20 @@
 <p>aboutus works!</p><br>
 
 <a routerLink="aboutus-child">aboutus-more</a><br>
-<a routerLink="user-list">userList</a>
+<a routerLink="user-list">userList</a><br>
+<label>Name:</label>
+
+ <input placeholder="useName" type="text"[(ngModel)]='name'><br><br>
+
+<!-- <input type="hidden" name="id" id="id" value=""><br> -->
+<label>Email:</label>
+<input placeholder="Email" type="email" [(ngModel)]='mail'><br><br>
+<input type="button" value="submit"  >
+<!-- <ng-container *ngFor="let data of list">
+<tr><td> data.id</td><td>data.nane</td></tr> -->
+
 <!-- <p (click)="navigateToContactus()">navigate to contactus</p> -->
 <!-- <app-aboutus-child></app-aboutus-child> -->
+<!-- </ng-container> -->
 <router-outlet></router-outlet>
 </div>

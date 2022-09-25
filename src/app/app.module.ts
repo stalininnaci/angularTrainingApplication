@@ -17,8 +17,8 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { AboutusChildComponent } from './aboutus-child/aboutus-child.component';
 import { ContactusChildComponent } from './contactus-child/contactus-child.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ParentCompComponent } from './prent-module/parent-comp/parent-comp.component';
-
+// import { ParentCompComponent } from './prent-module/parent-comp/parent-comp.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,12 +36,13 @@ import { ParentCompComponent } from './prent-module/parent-comp/parent-comp.comp
     AboutusChildComponent,
     ContactusChildComponent,
     PageNotFoundComponent,
-    ParentCompComponent
+    // ParentCompComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+   HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

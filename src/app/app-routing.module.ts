@@ -14,6 +14,11 @@ const routes: Routes = [
   // pathMatch:'full'
   // },
   {
+  path:'go-to-parent',
+  loadChildren:()=>import ('./parent-module/parent-module-routing.module')
+  .then(data=> data.ParentModuleRoutingModule)
+  },
+  {
   path:'aboutus',
   component:AboutusComponent,
   children:[
