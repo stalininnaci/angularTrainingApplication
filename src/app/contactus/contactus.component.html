@@ -1,20 +1,26 @@
 <div class="contact">
 <p>contactus works!</p>
 <a routerLink="contactus-child">contact for more</a>
+
 <table class='table'>
     <thead>
       <tr>
         <th>ID</th>
         <th>Name</th>
+        <th>email</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let person of dataList;">
-        <td>{{person.id}}</td>
-        <td>{{person.name}}</td>
+      <tr *ngFor="let list of dataList; index as i">
+        <td>{{list.id}}</td>
+        <td>{{list.name}}</td>
+        <td>{{list.Email}}</td>
+        <td><button (click)="editUser(list.id)">edit</button></td>
+        <td><button>delete</button></td>
       </tr>
     </tbody>
   </table>
- <p>{{dataList.person}}</p>  
+<!-- <p>{{dataList | json}}</p>  -->
 <router-outlet></router-outlet>
 </div>

@@ -37,7 +37,13 @@ const routes: Routes = [
 },{
   path:'contactus',
   component:ContactusComponent,
-  children:[{
+  children:[
+    {
+      path:'aboutus/:userid',
+      component:AboutusComponent,
+    },
+    
+    {
     path:'contactus-child',
     component:ContactusChildComponent
   }]
