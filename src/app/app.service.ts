@@ -18,21 +18,13 @@ export class AppService {
     return this.httpClient.post('http://localhost:3000/sqlpost',userDetails)
   }
   getUserById(userId:number){
-    console.log("==========>",userId);
-    
-    return this.httpClient.get('http://localhost:3000/getuserbyid?id='+userId)
+        return this.httpClient.get('http://localhost:3000/getuserbyid?id='+userId)
   }
-  // updateUser(userid:number,userDetails:any){
-  //   return this.httpClient.put('http://localhost:3000/sqlpost/${userId.id}')
-  // }
-  updateUser(userDetails:object){
-    console.log('appservice data',userDetails);
-    
+
+  updateUser(userDetails:object){  
     return this.httpClient.put('http://localhost:3000/putuserbyid',userDetails)
   }
-  delUserById(userId:number){
-    //  console.log('deleted data',userList);
-    
-    return this.httpClient.get('http://localhost:3000/del?id='+userId)
+  delUserById(userId2:number){  
+    return this.httpClient.delete('http://localhost:3000/del?id='+userId2)
   }
 }
