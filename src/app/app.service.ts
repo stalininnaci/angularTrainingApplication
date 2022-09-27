@@ -20,12 +20,19 @@ export class AppService {
   getUserById(userId:number){
     console.log("==========>",userId);
     
-    return this.httpClient.get(`http://localhost:3000/getuserbyid/${userId}`)
+    return this.httpClient.get('http://localhost:3000/getuserbyid?id='+userId)
   }
   // updateUser(userid:number,userDetails:any){
   //   return this.httpClient.put('http://localhost:3000/sqlpost/${userId.id}')
   // }
-  updateUser(id:number,userDetails:object){
-    return this.httpClient.put('http:localhost:3000/putuserbyid'+id,userDetails)
+  updateUser(userDetails:object){
+    console.log('appservice data',userDetails);
+    
+    return this.httpClient.put('http://localhost:3000/putuserbyid',userDetails)
+  }
+  delUserById(userId:number){
+    //  console.log('deleted data',userList);
+    
+    return this.httpClient.get('http://localhost:3000/del?id='+userId)
   }
 }

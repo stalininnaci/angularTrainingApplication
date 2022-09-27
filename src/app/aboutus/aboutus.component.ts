@@ -20,7 +20,10 @@ export class AboutusComponent implements OnInit {
     this.route.params.subscribe((data)=>{
       console.log(data);
       this.isChecked=data.hasOwnProperty('userid')? true:false;
-      this.id=data['id']
+      this.id=data['userid']
+      if(this.isChecked){
+        this.getUserById();
+      }
     })
 
 
@@ -31,8 +34,7 @@ export class AboutusComponent implements OnInit {
   }
   submit() {
     console.log(this.name,this.mail);
-    this.userDetails={
-      
+    this.userDetails={  
       'name':this.name,
       'Email':this.mail
     }
@@ -43,15 +45,27 @@ export class AboutusComponent implements OnInit {
     })
       // this.listDetails = ;
     }
+    getUserById(){
+      // console.log("----------->",[this.dataList.id]);
+      
+      
+      this.appservice.getUserById(this.id).subscribe(data=>{
+        console.log(data);
+        this.userDetails = data;
+        this.name = this.userDetails[0]['name'];
+        this.mail = this.userDetails[0]['Email'];
+        
+      })
+    }
     update(){
       console.log(this.name,this.mail);
     this.userDetails={
-      
+      'id':this.id,
       'name':this.name,
       'Email':this.mail
     }
-    this.appservice.updateUser(this.id,this.userDetails).subscribe(data=>{
-    console.log(this.userDetails);
+    this.appservice.updateUser(this.userDetails).subscribe(data=>{
+    console.log('update data',this.userDetails);
     console.log(data);
     
     })

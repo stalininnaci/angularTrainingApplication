@@ -17,10 +17,10 @@
         <td>{{list.name}}</td>
         <td>{{list.Email}}</td>
         <td><button (click)="editUser(list.id)">edit</button></td>
-        <td><button>delete</button></td>
+        <td><button (click)="deleteUser(list.id)">delete</button></td>
       </tr>
     </tbody>
   </table>
 <!-- <p>{{dataList | json}}</p>  -->
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
 </div>
