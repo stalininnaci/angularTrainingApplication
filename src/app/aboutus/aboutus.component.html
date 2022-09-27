@@ -2,16 +2,29 @@
     <p>aboutus works!</p><br>
 
     <a routerLink="aboutus-child">aboutus-more</a><br>
-
-    <label>Name:</label>
-
-    <input placeholder="useName" type="text" [(ngModel)]='name'><br><br>
-
-    <!-- <input type="hidden" name="id" id="id" value=""><br> -->
-    <label>Email:</label>
-    <input placeholder="Email" type="email" [(ngModel)]='mail'><br><br>
-    <input *ngIf="!isChecked" type="button" value="submit" (click)="submit()">
-    <input *ngIf="isChecked" type="button" value="update" (click)="update()">
+    <div [formGroup]="user">
+        <label>Name:</label>
+        <input placeholder="userName" type="text" formControlName="name"><br>
+        <ng-container>
+            <p style="color: red;" *ngIf="form['name'].invalid && 
+            (form['name'].touched || form['name'].dirty)">minimum 4 characters required</p>
+        </ng-container><br>
+        <!-- <input type="hidden" name="id" id="id" value=""><br> -->
+        <label>Email:</label>
+        <input placeholder="Email" type="email" formControlName="email"><br>
+        <ng-container>
+            <p style="color: red;" *ngIf="form['email'].invalid && (form['email'].touched || form['email'].dirty)">
+                entered email is not valid</p>
+        </ng-container><br>
+        <label>password:</label>
+        <input placeholder="Password" type="password" formControlName="pass"><br>
+        <ng-container>
+            <p style="color: red;" *ngIf="form['pass'].invalid && (form['pass'].touched || form['pass'].dirty)">
+                entered password is not strong enough</p>
+        </ng-container><br>
+    </div>
+    <input *ngIf="!isChecked" type="button" value="submit" (click)="submit()" [disabled]="user.invalid">
+    <input *ngIf="isChecked" type="button" value="update" (click)="update()"><br>
 
 
 

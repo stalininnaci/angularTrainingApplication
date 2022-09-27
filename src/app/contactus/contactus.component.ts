@@ -9,7 +9,7 @@ import { AppService } from '../app.service';
 })
 export class ContactusComponent implements OnInit {
 dataList:any;
-userid!:number;
+userid2!:number;
 ischeck=false;
 is_deleted!:number;
 id!:number;
@@ -35,21 +35,23 @@ deleteList:any;
   
  editUser(userid:number){
 
-  this.router.navigate(["user",userid])
+  this.router.navigate(["user",userid],{relativeTo:this.getRouter})
 
   // this.appservice.updateUser(this.dataList).subscribe(data=>{
   //   console.log(this.dataList);
   //  console.log(data);
     }
   deleteUser(userid:number){
+    console.log('kkkkkkkkkkkk',userid);
+    
     // this.deleteList={
     //   'id':this.id,
     //   'is_deleted':this.is_deleted
     // }
-      this.userid=userid
-      console.log(this.userid);
-      this.appservice.delUserById(this.userid).subscribe(data=>{
-     console.log('deleted data',this.userid);
+      this.userid2=userid
+      console.log(this.userid2);
+      this.appservice.delUserById(this.userid2).subscribe(data=>{
+     console.log('deleted data',this.userid2);
      console.log(data);
        this.getUserDetails(); 
       })
